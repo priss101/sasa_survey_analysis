@@ -1,0 +1,26 @@
+---
+title: "SASA_Survey"
+author: "Priscilla Siow"
+date: "7/18/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(haven)
+library(readr)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+#Convert .sav to .csv
+sasa_ucsb <- read_sav('/Users/priss/Desktop/SASA/SASAUCSB SVSH Survey 2020 2.sav')
+getwd() # this is the folder it will save into unless you specify otherwise in the path below
+write_csv(x=sasa_ucsb, file="sasa_ucsb_survey.csv")
+
+```
+
+```{r}
+#Data Cleaning
+
+
+```
